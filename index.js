@@ -25,6 +25,13 @@ var funkyFunction = function() {
   }
 }
 
+  describe('funkyFunction()', function() {
+    it('returns a function', function() {
+      expect(typeof window.funkyFunction()).toEqual('function')
+    })
+  })
+
+
 // We want to set theFunk equal to "FUNKY!" using our funkyFunction.
 // NOTE: you only need to modify the code below this line.
 var theFunk = funkyFunction
@@ -33,11 +40,6 @@ var theFunk = funkyFunction
 /*global describe, it */
 
 
-  describe('funkyFunction()', function() {
-    it('returns a function', function() {
-      expect(typeof window.funkyFunction()).toEqual('function')
-    })
-  })
 
   describe('theFunk', function() {
     it('is "FUNKY!"', function() {
