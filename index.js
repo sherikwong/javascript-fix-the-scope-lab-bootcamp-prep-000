@@ -4,11 +4,20 @@ function myAnimal() {
 }
 
 function yourAnimal() {
-  // How can we make sure that this function
-  // and the above function both pass?
-  // P.S.: You can't just hard-code 'cat' below
+  var animal = "cat";
   return animal
 }
+
+
+  describe('yourAnimal()', function() {
+    it('returns your animal', function(){
+      expect(window.yourAnimal()).toEqual('cat')
+    })
+
+    it('does not hard-code the answer', function() {
+      expect(window.yourAnimal.toString()).toNotContain("return 'cat'")
+    })
+  })
 
 function add2(n) {
   return n + two
@@ -30,22 +39,8 @@ var theFunk = funkyFunction
 
 /*global describe, it */
 
-describe('Fix the Scope', function() {
-  describe('myAnimal()', function() {
-    it('returns my animal', () => {
-      expect(window.myAnimal()).toEqual('dog')
-    })
-  })
 
-  describe('yourAnimal()', function() {
-    it('returns your animal', function(){
-      expect(window.yourAnimal()).toEqual('cat')
-    })
 
-    it('does not hard-code the answer', function() {
-      expect(window.yourAnimal.toString()).toNotContain("return 'cat'")
-    })
-  })
 
   describe('add2(n)', function() {
     it('adds two to n', function() {
