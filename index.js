@@ -9,21 +9,15 @@ function yourAnimal() {
 }
 
 function add2(n) {
-  var two = 2;
+  const two = 2
   return n + two
 
   // Feel free to move things around!
-  const two = 2
+
 }
 
 
-  describe('add2(n)', function() {
-    it('adds two to n', function() {
-      const n = Math.floor(Math.random() * 1000)
-      expect(window.add2(n)).toEqual(n + 2)
-    })
-  })
-
+ 
 var funkyFunction = function() {
   return function() {
     return "FUNKY!"
@@ -36,23 +30,6 @@ var theFunk = funkyFunction
 
 
 /*global describe, it */
-
-
-
-
-  describe('funkyFunction()', function() {
-    it('returns a function', function() {
-      expect(typeof window.funkyFunction()).toEqual('function')
-    })
-  })
-
-  describe('theFunk', function() {
-    it('is "FUNKY!"', function() {
-      expect(window.theFunk).toEqual('FUNKY!')
-    })
-  })
-
-})
 
 
 
